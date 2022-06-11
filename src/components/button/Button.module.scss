@@ -1,66 +1,34 @@
-.button {
+.button-wrapper {
   --button-border-width: 1px;
   --button-border-color: var(--color-text-primary);
 
-  --button-color: var(--color-background-primary);
+  --button-text-color: var(--color-text-primary);
+  --button-background-color: var(--color-background-primary);
 
   position: relative;
-  z-index: 10;
 
-  padding: 16px 18px;
-  background-color: transparent;
-
-  &__hash {
+  .hash {
     position: absolute;
-    bottom: -4px;
+    bottom: -3px;
     right: 16px;
 
     padding: 0 4px;
+    display: none;
 
-    font-size: 9px;
-    background-color: var(--button-color);
+    font-size: 8px;
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
   }
 
-  &::before {
-    position: absolute;
+  .button {
+    --aug-border-all: 1px;
+
+    padding: 16px 18px;
+    background-color: transparent;
+  }
+
+  &:hover .hash {
     display: block;
-
-    content: "";
-    z-index: -2;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: var(--button-border-color);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%, 0 78%);
   }
 
-  &::after {
-    position: absolute;
-    display: block;
-
-    content: "";
-    z-index: -1;
-
-    top: var(--button-border-width);
-    left: var(--button-border-width);
-
-    height: calc(100% - (var(--button-border-width) * 2));
-    width: calc(100% - (var(--button-border-width) * 2));
-
-    background-color: var(--button-color);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%, 0 78%);
-
-    transition-duration: 0.2s;
-    transition-property: opacity;
-  }
-
-  &:hover {
-    &::after {
-      opacity: 0.9;
-    }
-  }
 }

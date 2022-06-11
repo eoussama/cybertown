@@ -13,12 +13,14 @@ export function Button(props) {
   }, []);
 
   return (
-    <div className={classes.button}>
-      <span className={classes['button__label']}>
-        {label}
-      </span>
+    <div className={classes['button-wrapper']}>
+      <div data-augmented-ui="border bl-clip" className={classes.button}>
+        <span className={classes['button__label']}>
+          {label}
+        </span>
+      </div>
 
-      <span className={classes['button__hash']}>{hash}</span>
+      <span className={classes['hash']}>{hash}</span>
     </div>
   )
 }
