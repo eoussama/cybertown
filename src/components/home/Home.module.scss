@@ -1,8 +1,8 @@
 @import './../../theme/mixins/limit';
 
 .home {
-  height: 100%;
-  max-height: 600px;
+  height: 95%;
+  max-height: 62vh;
 
   padding: 0 10px;
 
@@ -29,7 +29,7 @@
   }
 
   &__title {
-    width: 320px;
+    width: 350px;
 
     .title {
       width: 100%;
@@ -37,7 +37,8 @@
   }
 
   &__subtitle {
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 28px;
   }
 
   &__building {
