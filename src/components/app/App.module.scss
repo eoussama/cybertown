@@ -45,11 +45,20 @@
 
       &--1 {
         background-image: url('./../../../public/images/skyline.png');
+
+        &::after {
+          content: '';
+
+          position: absolute;
+          bottom: -50%;
+          left: 0;
+
+          background-image: linear-gradient(to bottom, transparent, var(--color-background-primary) 50%);
+
+          height: 500px;
+          width: 100%;
+        }
       }
     }
   }
-}
-
-.test {
-  height: 100px;
 }
