@@ -5,12 +5,13 @@ import { About } from '../about/About';
 import { Home } from './../home/Home';
 
 import classes from './App.module.scss';
+import { Preview } from '../preview/Preview';
 
 function App() {
   return (
     <>
       <Parallax className={classes.home} pages={2}>
-        <ParallaxLayer sticky={{ start: 0 }}>
+        <ParallaxLayer style={{ height: 'fit-height' }} sticky={{ start: 0 }}>
           <Header />
         </ParallaxLayer>
 
@@ -39,8 +40,12 @@ function App() {
             <div className={`${classes['skyline']} ${classes['skyline--1']}`}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1} speed={1}>
+          <ParallaxLayer offset={1} speed={0.2}>
             <About />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={1.5} speed={1}>
+            <Preview />
           </ParallaxLayer>
         </main>
       </Parallax>

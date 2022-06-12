@@ -1,0 +1,9 @@
+@import './../../theme/mixins/limit';
+
+.preview {
+  @include padding;
+
+  &__wrapper {
+    @include limit;
+  }
+}

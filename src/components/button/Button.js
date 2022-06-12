@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import getHash from '../../utils/helpers/hash.helper';
 import classes from './Button.module.scss';
 
 export function Button(props) {
@@ -23,8 +24,4 @@ export function Button(props) {
       <span className={classes['hash']}>{hash}</span>
     </div>
   )
-}
-
-function getHash() {
-  return Math.round(Math.random() * 999).toString().padStart(3, '0');
 }

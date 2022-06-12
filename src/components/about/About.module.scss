@@ -1,10 +1,32 @@
 @import './../../theme/mixins/limit';
 
 .about {
+  position: relative;
+
   height: 100%;
-  padding: 0 10px;
+  background-color: var(--color-background-primary);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: -80px;
+    left: 0;
+
+    height: 200px;
+    width: 100%;
+
+    background-color: var(--color-background-primary);
+    z-index: 0;
+  }
+
+  @include padding;
 
   &__wrapper {
     @include limit;
+  }
+
+  &__body {
+    font-size: 14px;
   }
 }

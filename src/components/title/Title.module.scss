@@ -1,0 +1,64 @@
+.title {
+  --title-color: #ffffff;
+
+  position: relative;
+  width: fit-content;
+
+  color: var(--title-color);
+  margin-bottom: 50px;
+
+  &__label {
+    font-size: 24px;
+    filter: drop-shadow(0 0 20px var(--title-color));
+
+    animation-duration: 3s;
+    animation-name: title-flicker;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+  }
+
+  &__border {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+
+    background-color: var(--title-color);
+
+    &--1 {
+      height: 1px;
+      width: 100%
+    }
+
+    &--2 {
+      bottom: -18px;
+
+      height: 7px;
+      width: 60px;
+
+      clip-path: polygon(0 0, 100% 0%, 83% 100%, 0 100%);
+    }
+  }
+}
+
+@keyframes title-flicker {
+  0% {
+    filter: drop-shadow(0 0 10px var(--title-color));
+  }
+
+  30% {
+    filter: drop-shadow(0 0 5px var(--title-color));
+  }
+
+  60% {
+    filter: drop-shadow(0 0 8px var(--title-color));
+  }
+
+  90% {
+    filter: drop-shadow(0 0 4px var(--title-color));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 7px var(--title-color));
+  }
+}

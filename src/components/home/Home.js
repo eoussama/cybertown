@@ -1,4 +1,6 @@
 import classes from './Home.module.scss';
+import Particles from "react-tsparticles";
+import starsParticles from '../../utils/particles/stars.particles';
 
 export function Home() {
   return (
@@ -7,7 +9,7 @@ export function Home() {
         <div className={classes['home__left']}>
           <div className={classes['home__content']}>
             <div className={classes['home__title']}>
-              <img className={classes['title']} src="./logo.png" alt="Cybertown logo" />
+              <img className={classes['title']} src="./images/logo-animated.gif" alt="Cybertown logo" />
             </div>
 
             <div className={classes['home__subtitle']}>
@@ -22,6 +24,12 @@ export function Home() {
         <div className={classes['home__right']}>
           <img className={classes['home__building']} src="./images/building.png" alt="Cyber building" />
         </div>
+      </div>
+
+      <div className={classes['home__stars']}></div>
+
+      <div className={classes['home__particles']}>
+        <Particles id="starsParticles" options={starsParticles} />
       </div>
     </div>
   )
