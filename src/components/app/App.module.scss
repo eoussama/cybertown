@@ -1,0 +1,61 @@
+.app {
+  &__body {
+    &> :first-of-type {
+      padding-top: 63px;
+    }
+
+    .skyline {
+      width: 100%;
+      height: 500px;
+
+      position: relative;
+      background-repeat: no-repeat repeat-y;
+
+      &--5 {
+        // height: 30px;
+        
+        opacity: 0.8;
+        filter: brightness(0.03) contrast(0.9);
+
+        background-size: 10% auto;
+        background-image: url('./../../../public/images/skyline.png');
+      }
+
+      &--4 {
+        // height: 60px;
+
+        filter: brightness(0.1) contrast(0.9);
+        transform: rotateY(180deg);
+
+        background-size: 20% auto;
+        background-image: url('./../../../public/images/skyline.png');
+      }
+
+      &--3 {
+        // height: 94px;
+        filter: grayscale(1) brightness(0.5);
+
+        background-size: 30% auto;
+        background-image: url('./../../../public/images/skyline.png');
+      }
+
+      &--2 {
+        // height: 157px;
+
+        filter: saturate(0.7) brightness(0.8);
+        transform: rotateY(180deg);
+
+        background-size: 50% auto;
+        background-image: url('./../../../public/images/skyline.png');
+      }
+
+      &--1 {
+        background-image: url('./../../../public/images/skyline.png');
+      }
+    }
+  }
+}
+
+.test {
+  height: 100px;
+}
