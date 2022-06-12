@@ -29,14 +29,29 @@
     display: inline-block;
 
     line-height: initial;
-    color: var(--color-text-primary);
+    color: rgba(var(--color-text-primary-rgb), 0.7);
 
     padding: 10px;
     margin-right: 10px;
 
+    transition-duration: 0.2s;
+    transition-property: color;
+
     &:last-of-type {
       margin-right: 0;
       padding-right: 0;
+    }
+
+    &:hover {
+      color: rgba(var(--color-text-primary-rgb), 1);
+
+      &:nth-last-child(odd) {
+        text-shadow: 0 0 10px #ff49ff;
+      }
+
+      &:nth-last-child(even) {
+        text-shadow: 0 0 10px #75f3ec;
+      }
     }
   }
 }

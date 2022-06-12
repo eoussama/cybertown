@@ -1,3 +1,5 @@
+import { Button } from './../button/Button';
+
 import classes from './Home.module.scss';
 import Particles from "react-tsparticles";
 import starsParticles from '../../utils/particles/stars.particles';
@@ -18,12 +20,20 @@ export function Home() {
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
+
+            <div className={classes['home__buttons']}>
+              <div className={classes['home__button']}>
+                <Button label="Connect Wallet" />
+              </div>
+
+              <div className={classes['home__button']}>
+                <Button label="Mint" />
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className={classes['home__right']}>
-          <img className={classes['home__building']} src="./images/building.png" alt="Cyber building" />
-        </div>
+        <div className={classes['home__right']}></div>
       </div>
 
       <div className={classes['home__stars']}></div>

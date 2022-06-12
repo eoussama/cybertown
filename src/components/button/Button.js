@@ -4,6 +4,10 @@ import classes from './Button.module.scss';
 
 export function Button(props) {
   const label = props.label || 'Button';
+  const small = props.small || false;
+
+  const smallClass = `${small ? classes['button-wrapper--small'] : ''}`;
+
   const [hash, setHash] = useState(getHash());
 
   useEffect(() => {
@@ -14,7 +18,7 @@ export function Button(props) {
   }, []);
 
   return (
-    <div className={classes['button-wrapper']}>
+    <div className={`${classes['button-wrapper']} ${smallClass}`}>
       <div data-augmented-ui="border bl-clip" className={classes.button}>
         <span className={classes['button__label']}>
           {label}

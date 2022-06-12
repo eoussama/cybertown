@@ -9,9 +9,12 @@
 
   &__label {
     font-size: 24px;
-    filter: drop-shadow(0 0 20px var(--title-color));
 
-    animation-duration: 3s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(60deg, #ff49ff, #75f3ec);
+
+    animation-duration: 6s;
     animation-name: title-flicker;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -23,7 +26,7 @@
     bottom: -12px;
     left: 0;
 
-    background-color: var(--title-color);
+    background-image: linear-gradient(60deg, #ff49ff, #75f3ec);
 
     &--1 {
       height: 1px;
@@ -43,22 +46,22 @@
 
 @keyframes title-flicker {
   0% {
-    filter: drop-shadow(0 0 10px var(--title-color));
+    filter: drop-shadow(0 0 5px #ff49ff);
   }
 
   30% {
-    filter: drop-shadow(0 0 5px var(--title-color));
+    filter: drop-shadow(0 0 0px #75f3ec);
   }
 
   60% {
-    filter: drop-shadow(0 0 8px var(--title-color));
+    filter: drop-shadow(0 0 4px #ff49ff);
   }
 
   90% {
-    filter: drop-shadow(0 0 4px var(--title-color));
+    filter: drop-shadow(0 0 1px #75f3ec);
   }
 
   100% {
-    filter: drop-shadow(0 0 7px var(--title-color));
+    filter: drop-shadow(0 0 6px #ff49ff);
   }
 }

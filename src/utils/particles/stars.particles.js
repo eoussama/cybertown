@@ -1,4 +1,4 @@
-export default {
+const starsParticles = {
   retina_detect: true,
   fullscreen: { enable: true },
   particles: {
@@ -52,3 +52,5 @@ export default {
     }
   }
 };
+
+export default starsParticles;

@@ -28,5 +28,32 @@
 
   &__body {
     font-size: 14px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__right {
+    margin-left: 100px;
+  }
+
+  &__building {
+    width: 350px;
+
+    animation-name: building-bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes building-bounce {
+  from {
+    transform: translateY(-15px);
+  }
+
+  to {
+    transform: translateY(15px);
   }
 }
