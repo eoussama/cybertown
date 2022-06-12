@@ -46,11 +46,11 @@
       color: rgba(var(--color-text-primary-rgb), 1);
 
       &:nth-last-child(odd) {
-        text-shadow: 0 0 10px #ff49ff;
+        text-shadow: 0 0 10px var(--color-main);
       }
 
       &:nth-last-child(even) {
-        text-shadow: 0 0 10px #75f3ec;
+        text-shadow: 0 0 10px var(--color-accent);
       }
     }
   }

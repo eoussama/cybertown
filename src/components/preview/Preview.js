@@ -10,7 +10,9 @@ export function Preview() {
         </div>
 
         <div className={classes['preview__body']}>
-          Preview
+          <p>
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+          </p>
         </div>
       </div>
     </div>

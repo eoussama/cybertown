@@ -6,4 +6,8 @@
   &__wrapper {
     @include limit;
   }
+
+  &__body {
+    font-size: 14px;
+  }
 }

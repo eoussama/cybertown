@@ -1,4 +1,10 @@
 body {
   background-color: var(--color-background-primary);
   color: var(--color-text-primary);
+
+  p {
+    text-shadow:
+      2px 2px 40px rgba(var(--color-main-rgb), 0.8),
+      -2px -2px 5px rgba(var(--color-accent-rgb), 0.5);
+  }
 }
