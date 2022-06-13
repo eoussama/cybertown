@@ -14,8 +14,14 @@
     @include limit;
   }
 
-  &__logo .logo {
-    width: 140px;
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .logo {
+      width: 140px;
+    }
   }
 
   &__items {
