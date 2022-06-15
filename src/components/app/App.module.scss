@@ -10,13 +10,13 @@
 
       position: relative;
       background-repeat: no-repeat repeat-y;
+      background-image: url('./../../../public/images/skyline.png');
 
       &--5 {
         opacity: 0.8;
         filter: brightness(0.09) contrast(0.9);
 
         background-size: 10% auto;
-        background-image: url('./../../../public/images/skyline.png');
       }
 
       &--4 {
@@ -25,14 +25,12 @@
         transform: rotateY(180deg);
 
         background-size: 20% auto;
-        background-image: url('./../../../public/images/skyline.png');
       }
 
       &--3 {
         filter: brightness(0.4) saturate(0.9);
 
         background-size: 30% auto;
-        background-image: url('./../../../public/images/skyline.png');
       }
 
       &--2 {
@@ -40,12 +38,9 @@
         transform: rotateY(180deg);
 
         background-size: 50% auto;
-        background-image: url('./../../../public/images/skyline.png');
       }
 
       &--1 {
-        background-image: url('./../../../public/images/skyline.png');
-
         &::after {
           content: '';
 

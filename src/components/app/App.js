@@ -40,7 +40,7 @@ function App() {
             <div className={`${classes['skyline']} ${classes['skyline--1']}`}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1} speed={0.2}>
+          <ParallaxLayer offset={1} speed={0.1}>
             <About />
           </ParallaxLayer>
 
