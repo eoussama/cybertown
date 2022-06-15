@@ -5,6 +5,8 @@
   --button-text-color: var(--color-text-primary);
   --button-background-color: var(--color-background-primary);
 
+  all: initial;
+
   border: none;
   background-color: transparent;
 
@@ -14,26 +16,13 @@
   text-align: center;
   min-width: 150px;
 
-  .hash {
-    position: absolute;
-    bottom: -14px;
-    right: 16px;
-
-    padding: 0 4px;
-    display: none;
-
-    font-size: 8px;
-    color: var(--color-accent);
-    background-color: #111111;
-  }
-
   .button {
     --aug-border-all: 2px;
     --aug-border-bg: linear-gradient(to bottom right, var(--color-main) 10%, var(--color-accent));
 
     text-transform: uppercase;
 
-    padding: 16px 18px;
+    padding: 20px;
     background-color: transparent;
 
     transition-duration: 0.2s;
@@ -42,16 +31,41 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(60deg, var(--color-main), var(--color-accent));
+
+    &__label {
+      font-size: 10px;
+      font-family: PixelFont;
+      font-weight: var(----font-weight-regular);
+    }
+  }
+
+  .hash {
+    position: absolute;
+    bottom: -6px;
+    right: 16px;
+
+    padding: 4px;
+    display: none;
+
+    font-size: 9px;
+    font-family: PixelFont;
+    font-weight: var(----font-weight-regular);
+
+    color: var(--color-accent);
+    background-color: #111111;
   }
 
   &--small {
     .button {
       --aug-border-all: 1px;
+      padding: 12px;
     }
 
     .hash {
       bottom: -8px;
       padding: 4px;
+
+      font-size: 8px;
     }
   }
 
