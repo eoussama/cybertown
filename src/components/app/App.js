@@ -20,31 +20,31 @@ function App() {
             <Home />
           </ParallaxLayer>
 
-          <ParallaxLayer style={{height: 'fit-height'}} offset={0.68} speed={0.05}>
+          <ParallaxLayer offset={0.68} speed={0.05}>
             <div className={`${classes['skyline']} ${classes['skyline--5']}`}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{height: 'fit-height'}} offset={0.7} speed={0.1}>
+          <ParallaxLayer offset={0.7} speed={0.1}>
             <div className={`${classes['skyline']} ${classes['skyline--4']}`}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{height: 'fit-height'}} offset={0.755} speed={0.2}>
+          <ParallaxLayer offset={0.755} speed={0.2}>
             <div className={`${classes['skyline']} ${classes['skyline--3']}`}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{height: 'fit-height'}} offset={0.838} speed={0.36}>
+          <ParallaxLayer offset={0.838} speed={0.36}>
             <div className={`${classes['skyline']} ${classes['skyline--2']}`}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{height: 'fit-height'}} offset={0.98} speed={0.6}>
+          <ParallaxLayer offset={0.98} speed={0.6}>
             <div className={`${classes['skyline']} ${classes['skyline--1']}`}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{height: 'fit-height'}} offset={1} speed={0.2}>
+          <ParallaxLayer offset={1} speed={0.2}>
             <About />
           </ParallaxLayer>
 
-          <ParallaxLayer style={{height: 'fit-height'}} offset={1.5} speed={1}>
+          <ParallaxLayer style={{ height: 'fit-height' }} offset={1.5} speed={1}>
             <Preview />
           </ParallaxLayer>
         </main>
