@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .logo {
       width: 140px;
     }
@@ -52,11 +52,11 @@
       color: rgba(var(--color-text-primary-rgb), 1);
 
       &:nth-last-child(odd) {
-        text-shadow: 0 0 10px var(--color-main);
+        text-shadow: 2px 2px 10px rgba(var(--color-accent-rgb), 0.5), -2px -2px 10px rgba(var(--color-accent-rgb), 0.5);
       }
 
       &:nth-last-child(even) {
-        text-shadow: 0 0 10px var(--color-accent);
+        text-shadow: 2px 2px 10px rgba(var(--color-main-rgb), 0.5), -2px -2px 10px rgba(var(--color-main-rgb), 0.5);
       }
     }
   }
