@@ -19,7 +19,7 @@ export function Header() {
               <li className={classes['header__item']}>Roadmap</li>
               <li className={classes['header__item']}>Team</li>
               <li className={classes['header__item']}>
-                <Button small={true} label="Connect Wallet" />
+                <Button small={true} primary={true} label="Connect Wallet" />
               </li>
             </ul>
           </nav>

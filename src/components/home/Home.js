@@ -23,7 +23,7 @@ export function Home() {
 
             <div className={classes['home__buttons']}>
               <div className={classes['home__button']}>
-                <Button label="Connect Wallet" />
+                <Button primary={true} label="Connect Wallet" />
               </div>
 
               <div className={classes['home__button']}>

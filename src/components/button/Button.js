@@ -7,7 +7,9 @@ export function Button(props) {
 
   const label = props.label || 'Button';
   const small = props.small || false;
+  const primary = props.primary || false;
 
+  const primaryClass = `${primary ? classes['button-wrapper--primary'] : ''}`;
   const smallClass = `${small ? classes['button-wrapper--small'] : ''}`;
 
   const [isHovered, setIsHovered] = useState(false);
@@ -27,22 +29,35 @@ export function Button(props) {
   }, [isHovered]);
 
   return (
-    <button
-      type="button"
-      className={`${classes['button-wrapper']} ${smallClass}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div
-        data-augmented-ui="border bl-clip"
-        className={classes.button}
+    <>
+      <button
+        type="button"
+        className={`${classes['button-wrapper']} ${smallClass} ${primaryClass}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        <span className={classes['button__label']}>
-          {label}
-        </span>
-      </div>
+        <div
+          data-augmented-ui="border bl-clip"
+          className={classes.button}
+        >
+          <span className={classes['button__label']}>
+            {label}
+          </span>
+        </div>
 
-      <span className={classes['hash']}>{hash}</span>
-    </button>
+        <span className={classes['hash']}>{hash}</span>
+
+        <div className={`${classes['button-wrapper__glitch']}`}>
+          <div
+            data-augmented-ui="border bl-clip"
+            className={classes.button}
+          >
+            <span className={classes['button__label']}>
+              {label}
+            </span>
+          </div>
+        </div>
+      </button>
+    </>
   )
 }
