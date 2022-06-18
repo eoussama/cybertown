@@ -12,8 +12,8 @@ import classes from './App.module.scss';
 function App() {
   return (
     <>
-      <Parallax className={classes.home} pages={5}>
-        <ParallaxLayer sticky={{ start: 0 }}>
+      <Parallax pages={5}>
+        <ParallaxLayer className={classes['app__title']} sticky={{ start: 0 }}>
           <Header />
         </ParallaxLayer>
 

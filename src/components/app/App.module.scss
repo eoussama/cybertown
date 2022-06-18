@@ -1,4 +1,8 @@
 .app {
+  &__title {
+    height: fit-content !important;
+  }
+
   &__body {
     &> :first-of-type {
       padding-top: 63px;
