@@ -9,16 +9,9 @@
 
   &__label {
     font-size: 24px;
+    color: var(--title-color);
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(60deg, rgba(var(--color-main-rgb), 0.8), rgba(var(--color-accent-rgb), 0.4));
-
-    animation-duration: 6s;
-    animation-name: title-flicker;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate-reverse;
+    animation: text-flicker 1.5s infinite alternate;
   }
 
   &__border {
@@ -26,7 +19,8 @@
     bottom: -12px;
     left: 0;
 
-    background-image: linear-gradient(60deg, rgba(var(--color-main-rgb), 0.7), rgba(var(--color-accent-rgb), 0.7));
+    background-color: #ffffff;
+    animation: box-flicker 1.5s infinite alternate;
 
     &--1 {
       height: 1px;
@@ -44,24 +38,54 @@
   }
 }
 
-@keyframes title-flicker {
-  0% {
-    filter: drop-shadow(0 0 5px var(--color-main));
-  }
-
-  30% {
-    filter: drop-shadow(0 0 0px var(--color-accent));
-  }
-
-  60% {
-    filter: drop-shadow(0 0 4px var(--color-main));
-  }
-
-  90% {
-    filter: drop-shadow(0 0 1px var(--color-accent));
-  }
-
+@keyframes text-flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
   100% {
-    filter: drop-shadow(0 0 6px var(--color-main));
+    text-shadow:
+      0 0 4px var(--title-color),
+      0 0 11px var(--title-color),
+      0 0 19px var(--title-color),
+      0 0 40px var(--color-main),
+      0 0 80px var(--color-main),
+      0 0 90px var(--color-main),
+      0 0 100px var(--color-main),
+      0 0 150px var(--color-main);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes box-flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    box-shadow:
+      0 0 4px var(--title-color),
+      0 0 11px var(--title-color),
+      0 0 19px var(--title-color),
+      0 0 40px var(--color-main),
+      0 0 80px var(--color-main),
+      0 0 90px var(--color-main),
+      0 0 100px var(--color-main),
+      0 0 150px var(--color-main);
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
   }
 }

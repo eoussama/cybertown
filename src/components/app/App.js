@@ -3,15 +3,17 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { Header } from './../header/Header';
 import { About } from '../about/About';
 import { Home } from './../home/Home';
+import { Preview } from '../preview/Preview';
+import { Roadmap } from '../roadmap/Roadmap';
+import { Team } from '../team/Team';
 
 import classes from './App.module.scss';
-import { Preview } from '../preview/Preview';
 
 function App() {
   return (
     <>
-      <Parallax className={classes.home} pages={2}>
-        <ParallaxLayer style={{ height: 'fit-height' }} sticky={{ start: 0 }}>
+      <Parallax className={classes.home} pages={5}>
+        <ParallaxLayer sticky={{ start: 0 }}>
           <Header />
         </ParallaxLayer>
 
@@ -44,8 +46,16 @@ function App() {
             <About />
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ height: 'fit-height' }} offset={1.5} speed={1}>
+          <ParallaxLayer offset={2}>
             <Preview />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={3}>
+            <Roadmap />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={4}>
+            <Team />
           </ParallaxLayer>
         </main>
       </Parallax>
