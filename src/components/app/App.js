@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Parallax pages={5}>
-        <ParallaxLayer className={classes['app__title']} sticky={{ start: 0 }}>
+        <ParallaxLayer className={classes['app__title']} factor={10} sticky={{ start: 0 }}>
           <Header />
         </ParallaxLayer>
 

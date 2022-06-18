@@ -1,6 +1,8 @@
 .app {
   &__title {
+    position: sticky !important;
     height: fit-content !important;
+    transform: translate3d(0, 0, 0) !important;
   }
 
   &__body {
