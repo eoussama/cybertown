@@ -28,15 +28,33 @@
     font-size: 14px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
+
   }
 
-  &__right {
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 50px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row:first-of-type &__building {
     margin-left: 100px;
   }
 
+  &__row:last-of-type &__building {
+    margin-right: 100px;
+  }
+
   &__building {
-    width: 350px;
+    width: 250px;
 
     animation-name: building-bounce;
     animation-duration: 1.5s;

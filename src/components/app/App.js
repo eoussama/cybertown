@@ -46,15 +46,15 @@ function App() {
             <About />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2}>
+          <ParallaxLayer offset={2} speed={0.1}>
             <Preview />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={3}>
+          <ParallaxLayer offset={3} speed={0.1}>
             <Roadmap />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={4}>
+          <ParallaxLayer offset={4} speed={0.1}>
             <Team />
           </ParallaxLayer>
         </main>
