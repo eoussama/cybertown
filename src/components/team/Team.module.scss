@@ -1,5 +1,11 @@
 @import './../../theme/mixins/limit';
 
+@property --team-border-color {
+  syntax: '<degree>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .team {
   background-color: var(--color-background-primary);
 
@@ -11,5 +17,82 @@
 
   &__body {
     font-size: 14px;
+  }
+
+  &__head {
+    margin-bottom: 80px;
+  }
+
+  &__description {
+    margin-bottom: 80px;
+  }
+
+  &__members {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .member {
+    cursor: grab;
+  
+    position: relative;
+    animation: 2s rotate-border infinite;
+
+    transition-duration: 0.2s;
+    transition-property: filter;
+
+    filter: drop-shadow(5px 5px 12px rgba(var(--color-accent-rgb), 0.2)) drop-shadow(-5px -5px 12px rgba(var(--color-main-rgb), 0.2));
+
+    &__wrapper {
+      --aug-border-all: 2px;
+      --aug-border-bg: linear-gradient(var(--team-border-color), var(--color-main) 10%, var(--color-accent));
+    }
+
+    &__picture {
+      width: 160px;
+      height: 170px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__name {
+      position: absolute;
+      bottom: 20px;
+      right: -30px;
+
+      font-size: 18px;
+      color: var(--color-accent);
+
+      text-shadow: 2px 2px 0 var(--color-main);
+    }
+  }
+}
+
+.team__parallax {
+  transform-style: preserve-3d;
+}
+
+@keyframes rotate-border {
+  0% {
+    --team-border-color: 0deg;
+  }
+
+  25% {
+    --team-border-color: 90deg;
+  }
+
+  50% {
+    --team-border-color: 180deg;
+  }
+
+  75% {
+    --team-border-color: 270deg;
+  }
+
+  100% {
+    --team-border-color: 360deg;
   }
 }
