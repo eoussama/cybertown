@@ -31,12 +31,14 @@ export function About() {
             </div>
 
             <div className={classes['about__right']}>
+              <div className={classes['about__backlight']}></div>
               <img className={classes['about__building']} src="./images/building1.png" alt="Cyber building 1" />
             </div>
           </div>
 
           <div className={classes['about__row']}>
             <div className={classes['about__left']}>
+              <div className={classes['about__backlight']}></div>
               <img className={classes['about__building']} src="./images/building2.png" alt="Cyber building 2" />
             </div>
 
