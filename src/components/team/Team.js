@@ -6,15 +6,15 @@ import Tilt from 'react-parallax-tilt';
 export function Team() {
 
   const members = team.map((member, i) => (
-    <Tilt
-      className={classes['parallax']}
-      perspective={500}
-      glareEnable={false}
-      scale={1.3}
+    <div
+      key={i}
+      className={classes['member']}
     >
-      <div
-        key={i}
-        className={classes['member']}
+      <Tilt
+        className={classes['parallax']}
+        perspective={500}
+        glareEnable={false}
+        scale={1.3}
       >
         <div
           className={classes['member__wrapper']}
@@ -24,16 +24,18 @@ export function Team() {
             <img src={member.picture} alt={member.name + "'s picture"} className='picture'></img>
           </div>
         </div>
+      </Tilt>
 
-        <div className={classes['member__name']}>
-          {member.name}
-        </div>
+      <div className={classes['member__name']}>
+        {member.name}
       </div>
-    </Tilt>
+    </div>
   ));
 
   return (
     <div className={classes.team}>
+      <div className={`${classes['team__divider']} ${classes['team__divider--top']}`}></div>
+
       <div className={classes['team__wrapper']}>
         <div className={classes['team__head']}>
           <Title label="Team" />
@@ -49,6 +51,8 @@ export function Team() {
           </div>
         </div>
       </div>
-    </div >
+
+      <div className={`${classes['team__divider']} ${classes['team__divider--bottom']}`}></div>
+    </div>
   )
 }
