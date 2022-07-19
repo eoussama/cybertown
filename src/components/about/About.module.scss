@@ -31,6 +31,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @media (max-width: 420px) {
+      font-size: 12px;
+    }
+
   }
 
   &__row {
@@ -43,14 +47,25 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
   }
 
   &__row:first-of-type &__building {
     margin-left: 100px;
+    
   }
 
   &__row:last-of-type &__building {
     margin-right: 100px;
+  }
+
+  &__row:last-of-type {
+    @media (max-width: 420px) {
+      display: none;
+    }
   }
 
   &__left,
@@ -66,6 +81,10 @@
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-timing-function: ease-in-out;
+
+    @media (max-width: 640px) {
+      display: none;
+    }
   }
 
   &__backlight {

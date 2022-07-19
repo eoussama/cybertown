@@ -7,6 +7,10 @@
   position: relative;
   @include padding;
 
+  @media (max-width: 640px) {
+    max-height: 50vh;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -15,6 +19,10 @@
     z-index: 1;
 
     @include limit;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
   }
 
   &__particles {
@@ -51,8 +59,18 @@
     flex: 1;
   }
 
+  &__right {
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+
   &__content {
     max-width: 500px;
+
+    @media (max-width: 640px) {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -62,11 +80,28 @@
       width: 100%;
       filter: contrast(0.85) saturate(1.2);
     }
+
+    @media (max-width: 640px) {
+      margin: auto;
+      width: 300px;
+    }
+
+    @media (max-width: 420px) {
+      width: 200px;
+    }
   }
 
   &__subtitle {
     font-size: 16px;
     line-height: 28px;
+
+    @media (max-width: 640px) {
+      font-size: 13px;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 12px;
+    }
   }
 
   &__buttons {
@@ -74,9 +109,21 @@
     align-items: center;
     
     margin-top: 30px;
+
+    @media (max-width: 640px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 420px) {
+      flex-direction: column;
+    }
   }
 
   &__button {
     margin: 0 10px;
+
+    @media (max-width: 420px) {
+      margin-bottom: 15px;
+    }
   }
 }

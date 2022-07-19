@@ -24,8 +24,12 @@
     background-image: url(./../../../public/images/skyscrappers.jpg);
     background-attachment: fixed;
     background-size: cover;
-    
+
     opacity: 0.2;
+  }
+
+  @media (max-width: 420px) {
+    display: none;
   }
 
   @include padding;
@@ -57,6 +61,10 @@
 
   &__body {
     font-size: 14px;
+
+    @media (max-width: 420px) {
+      font-size: 12px;
+    }
   }
 
   &__head {
@@ -71,11 +79,17 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media (max-width: 640px) {
+      overflow: auto;
+      padding: 80px 0;
+      justify-content: flex-start;
+    }
   }
 
   .member {
     cursor: grab;
-  
+
     position: relative;
     animation: 2s rotate-border infinite;
 
@@ -110,7 +124,7 @@
       font-size: 18px;
       color: var(--color-accent);
       text-shadow: 2px 2px 0 var(--color-main);
-      
+
       animation-duration: 2s;
       animation-name: hover-name;
       animation-direction: alternate;
@@ -130,7 +144,7 @@
 
       .member__name {
         animation-name: none;
-        
+
         top: 10px;
         left: -60px;
         right: initial;
@@ -154,6 +168,10 @@
         }
       }
     }
+
+    @media (max-width: 640px) {
+      margin-right: 80px;
+    }
   }
 }
 
@@ -165,7 +183,7 @@
   from {
     transform: translateY(-4px);
   }
-  
+
   to {
     transform: translateY(4px);
   }
@@ -175,7 +193,7 @@
   from {
     opacity: 0;
   }
-  
+
   to {
     opacity: 1;
   }
