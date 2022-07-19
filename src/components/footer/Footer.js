@@ -10,6 +10,7 @@ export function Footer() {
       href={e.link}
       target="_blank"
       title={e.label}
+      rel="noreferrer"
       className={classes.footer__social}
     >
       <e.icon />
