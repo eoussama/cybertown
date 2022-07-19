@@ -8,6 +8,7 @@ import { Roadmap } from '../roadmap/Roadmap';
 import { Team } from '../team/Team';
 
 import classes from './App.module.scss';
+import { Footer } from '../footer/Footer';
 
 function App() {
   return (
@@ -56,6 +57,10 @@ function App() {
 
           <ParallaxLayer offset={4} speed={0.1}>
             <Team />
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={4.5} speed={0.1} factor={0.5}>
+            <Footer />
           </ParallaxLayer>
         </main>
       </Parallax>
