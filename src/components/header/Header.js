@@ -16,6 +16,7 @@ export function Header() {
             <ul className={classes['header__items']}>
               <li className={classes['header__item']}>Home</li>
               <li className={classes['header__item']}>About</li>
+              <li className={classes['header__item']}>Preview</li>
               <li className={classes['header__item']}>Roadmap</li>
               <li className={classes['header__item']}>Team</li>
               <li className={classes['header__item']}>
